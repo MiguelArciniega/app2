@@ -25,3 +25,21 @@
 #container a {
   text-decoration: none;
 }
+
+div[scrolly=true] {
+  overflow-y: auto;
+}
+
+ion-content{
+  position: absolute;
+}
+
+ion-card-header{
+  text-align: center;
+} 
+
+ion-card-content{
+  text-align: justify;
+}
+
+
