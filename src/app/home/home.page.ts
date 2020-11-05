@@ -15,7 +15,7 @@ export class HomePage {
     // consulta remota
     this.items.push({
       image: 'https://mapio.net/images-p/6589267.jpg',
-      title: 'Titulo',
+      title: 'Titulo Verde',
       subtitle: 'Subtitulo',
       text: 'Texto',
       active: true
@@ -23,15 +23,15 @@ export class HomePage {
 
     this.items.push({
       image: 'https://www.mexicoenfotos.com/MX12685364049093.jpg',
-      title: 'Titulo2',
+      title: 'Titulo Amarillo',
       subtitle: 'Subtitulo2',
       text: 'Texto2',
-      active: false
+      active: true
     });
 
     this.items.push({
       image: 'https://mapio.net/images-p/22292684.jpg',
-      title: 'Titulo3',
+      title: 'Titulo Blue',
       subtitle: 'Subtitulo3',
       text: 'Texto3',
       active: true
@@ -42,7 +42,12 @@ export class HomePage {
     console.log('Buscando...' + this.search);
 
     this.items = this.items.filter((item) => {
-      return (item.title.toLocalLowerCase().indexOf(this.search.toLocaleLowerCase()) > -1);
+      if (this.search === ''){
+        return(true);
+      }else{
+        console.log(item.title.toLocaleLowerCase().indexOf(this.search.toLocaleLowerCase()) > -1);
+        return (item.title.toLocaleLowerCase().indexOf(this.search.toLocaleLowerCase()) > -1);
+      }
     });
   }
 
